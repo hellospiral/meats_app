@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   resources :meats do
     resources :reviews
   end
+
+  resources :search, only: [:index]
 end

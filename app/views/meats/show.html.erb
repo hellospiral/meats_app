@@ -16,9 +16,12 @@
 
 <h4>Average rating: <%= @meat.average_rating %></h4>
 
+
 <% @meat.reviews.each do |review| %>
+<div class="well">
   <h5><%= review.rating %> stars</h5>
-  <h5><%= review.comment %> </h5>
+  <h6><%= review.comment %> </h6>
+</div>
 <% end %>
 
 <%= link_to "add review", new_meat_review_path(@meat) %>
