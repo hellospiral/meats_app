@@ -1,6 +1,6 @@
-<h1>Categories</h1>
+
 
 <h3>Today's featured Meat:</h3>
 
-<h5><%=@featuredMeat.name%></h5>
+<h5><%=link_to @featuredMeat.name, category_meat_path(@featuredMeat.category, @featuredMeat)%></h5>
 <%= image_tag(@featuredMeat.image) %>
