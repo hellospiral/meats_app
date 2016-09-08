@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Category do
+describe Meat do
   it { should validate_presence_of :name }
-  it { should have_many :meats }
+  it { should belong_to :category }
 end
