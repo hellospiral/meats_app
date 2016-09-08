@@ -1,0 +1,10 @@
+<h1><%= @category.name %>:</h1>
+
+
+<ol>
+  <% @category.meats.each do |meat| %>
+    <%= meat.name %>
+  <% end %>
+</ol>
+
+<%= link_to "Add a meat to " + @category.name, new_category_meat_path(@category, @meat) %>

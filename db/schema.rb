@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 20160908161417) do
 
   create_table "meats", force: :cascade do |t|
     t.string  "name"
+    t.string  "description"
+    t.string  "image"
     t.integer "category_id"
     t.integer "average_rating"
   end
