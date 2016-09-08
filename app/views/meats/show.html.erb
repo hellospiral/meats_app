@@ -7,5 +7,22 @@
 <h5>$<%= @meat.price %></h5>
 
 <h5>Weight: <%= @meat.weight %> lbs </h5>
+<p><%= link_to "edit", edit_category_meat_path(@meat) %></p>
 
-<%= link_to "edit", edit_category_meat_path(@meat) %>
+<hr>
+
+
+<h3>Reviews:</h3>
+
+<h4>Average rating: <%= @meat.average_rating %></h4>
+
+<% @meat.reviews.each do |review| %>
+  <h5><%= review.rating %> stars</h5>
+  <h5><%= review.comment %> </h5>
+<% end %>
+
+<%= link_to "add review", new_meat_review_path(@meat) %>
+
+<hr>
+
+<%= link_to "back", category_path(@meat.category) %>

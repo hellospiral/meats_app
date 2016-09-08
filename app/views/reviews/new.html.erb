@@ -1,0 +1,7 @@
+<h3>Tell us how you feel about <%= @meat.name %></h3>
+
+<%= render "form" %>
+
+<hr>
+
+<%= link_to "Back", category_meat_path(@meat.category, @meat) %>

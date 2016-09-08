@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160908161417) do
+ActiveRecord::Schema.define(version: 20160908202119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,8 +23,16 @@ ActiveRecord::Schema.define(version: 20160908161417) do
     t.string  "name"
     t.string  "description"
     t.string  "image"
+    t.integer "weight"
+    t.integer "price"
     t.integer "category_id"
-    t.integer "average_rating"
+    t.integer "average_rating", default: 0
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.float   "rating"
+    t.string  "comment"
+    t.integer "meat_id"
   end
 
 end

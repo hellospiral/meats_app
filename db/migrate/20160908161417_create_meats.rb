@@ -4,8 +4,10 @@ class CreateMeats < ActiveRecord::Migration[5.0]
       t.column :name, :string
       t.column :description, :string
       t.column :image, :string
+      t.column :weight, :integer
+      t.column :price, :integer
       t.column :category_id, :integer
-      t.column :average_rating, :integer
+      t.column :average_rating, :integer, :default => 0
     end
   end
 end
