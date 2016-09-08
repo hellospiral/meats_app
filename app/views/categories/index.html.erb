@@ -10,3 +10,9 @@
 </ul>
 
 <%= link_to "Add a category", new_category_path %>
+
+
+<h3>Today's featured Meat:</h3>
+
+<h5><%=@featuredMeat.name%></h5>
+<%= image_tag(@featuredMeat.image) %>

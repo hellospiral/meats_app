@@ -1,6 +1,8 @@
 class CategoriesController < ApplicationController
   def index
     @categories = Category.all
+    randomIndex = rand(Meat.all.length)
+    @featuredMeat = Meat.find(randomIndex + 1)
   end
 
   def new

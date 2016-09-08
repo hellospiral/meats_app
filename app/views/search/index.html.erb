@@ -1,10 +1,15 @@
+<h1>Search</h1>
+
 <form action="/search" method="get">
-  <label for="query">Search term:</label>
+  <label for="query">Term:</label>
   <input id="query" name="query" type="text">
   <button type="submit">Search</button>
 </form>
 
-
-<% @meats.each do |meat| %>
-  <h3><%= meat.name %></h3>
+<% if @search_results && @search_results != [] %>
+  <% @search_results.each do |meat| %>
+    <h6><%= link_to meat.name, category_meat_path(meat.category, meat) %></h6>
+  <% end %>
+<% elsif @search_results %>
+  <h6>No results were found </h6>
 <% end %>

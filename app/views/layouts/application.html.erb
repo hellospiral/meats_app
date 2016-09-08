@@ -9,8 +9,24 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand navbar-right" href="/">Meats</a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <% @categories.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %></li>
+          <% end %>
+        </ul>
+      </div>
+    </nav>
     <div class="container">
       <%= yield %>
     </div>
   </body>
+  <footer>
+    <hr>
+    <%= link_to "search", search_index_path %>
+  </footer>
 </html>
