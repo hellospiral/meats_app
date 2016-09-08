@@ -3,7 +3,7 @@
 
 <ol>
   <% @category.meats.each do |meat| %>
-    <%= meat.name %>
+    <%= link_to meat.name, category_meat_path(meat) %>
   <% end %>
 </ol>
 

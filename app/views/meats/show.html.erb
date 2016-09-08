@@ -1,0 +1,11 @@
+<h1><%= @meat.name %></h1>
+
+<img src="<%= @meat.image %>" />
+
+<h4> <%= @meat.description %>
+
+<h5>$<%= @meat.price %></h5>
+
+<h5>Weight: <%= @meat.weight %> lbs </h5>
+
+<%= link_to "edit", edit_category_meat_path(@meat) %>
