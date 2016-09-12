@@ -1,24 +1,30 @@
-# README
+# Scale Designer
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### By Matt Carlson
 
-Things you may want to cover:
+## Description
 
-* Ruby version
+Ruby on Rails web app for posting, editing, and reviewing different types of meat
 
-* System dependencies
+## Configuration
 
-* Configuration
+1. `git clone https://github.com/hellospiral/meats_app.git`
+1. `cd meats_app`
+1. `bundle`
+1. `rake db:create && rake db:migrate`
+1. `rails s` and visit [localhost:3000](http://localhost:3000)
 
-* Database creation
+## Technologies Used
 
-* Database initialization
+* Ruby
+* Rails
+* Javascript
+* CSS
+* HTML
+* Bootstrap
 
-* How to run the test suite
+### License
 
-* Services (job queues, cache servers, search engines, etc.)
+This software is licensed under the MIT license.
 
-* Deployment instructions
-
-* ...
+Copyright (c) 2016 Matt Carlson
